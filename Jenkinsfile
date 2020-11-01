@@ -1,6 +1,10 @@
 pipeline {
 	agent any
 	stages {
+		stage('SCM Checkout'){
+
+                  git 'https://github.com/Abhilashreddy1995/MVN_Groovy.git'
+
 		stage{ 'Build' } {
 			steps {
 				sh "mvn clean"
@@ -17,5 +21,4 @@ pipeline {
 			}
 		{
 	}
-}
 }
