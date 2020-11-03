@@ -24,7 +24,7 @@ pipeline {
 		}
 		stage( 'Backup of WAR file' ) {
                         steps {
-                                sh "cp -pr /opt/tomcat/webapps/mygroovy /opt/tomcat/webapps/mygroovy_$(date +"%d.%m.%Y")
+                                sh "cp -pr /opt/tomcat/webapps/mygroovy /opt/tomcat/webapps/mygroovy_${date +"%d.%m.%Y"}
                                 }
                 }
 
