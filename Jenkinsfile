@@ -36,6 +36,7 @@ pipeline {
                 stage( 'Tomcat Restart' ) {
                         steps {
                                 sh "/opt/tomcat/bin/shutdown.sh"
+				sh "sleep 4000"
 				sh "/opt/tomcat/bin/startup.sh"
                                 }
                 }
