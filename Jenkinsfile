@@ -30,9 +30,9 @@ pipeline {
 		}
                 stage( 'Tomcat Restart' ) {
                         steps {
-                                sh "/opt/tomcat/bin/shutdown.sh"
+                                sh "su -c root '/opt/tomcat/bin/shutdown.sh'"
 				sh "sleep 4000"
-				sh "/opt/tomcat/bin/startup.sh"
+				sh "su -c root '/opt/tomcat/bin/startup.sh'"
                                 }
                 }
 
