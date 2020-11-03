@@ -17,5 +17,31 @@
   </dependencies>
   <build>
     <finalName>demoGroovy</finalName>
+<plugins>
+        <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.1</version>
+        <configuration>
+                <tomcatUsers>/opt/tomcat/config/tomcat-users.xml</tomcatUsers>
+                <url>http://localhost:8080/manager/text</url>
+                <server>myserver</server>
+                <path>/mygroovy</path>
+                <update>true</update>
+        </configuration>
+</plugin>
+</plugins>
   </build>
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>abhilash-releases</name>
+        <url>http://localhost:8081/artifactory/libs-release-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>abhilash-snapshots</name>
+        <url>http://localhost:8081/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
