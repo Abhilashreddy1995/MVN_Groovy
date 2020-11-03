@@ -29,7 +29,7 @@ pipeline {
 		}
 		stage( 'Jfrog Deploy' ) {
                         steps {
-                                sh "mvn tomcat7:deploy"
+                                sh "mvn deploy"
                         	}
 		}
 		stage( 'Tomcat Deploy' ) {
