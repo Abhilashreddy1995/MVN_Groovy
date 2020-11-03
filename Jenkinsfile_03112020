@@ -21,15 +21,7 @@ pipeline {
 			steps {
 				sh "mvn install"
 			}
-		stage( 'Sonar run' ) {
-                        steps {
-                                sh "mvn sonar:sonar"
-                        }
 		}
-		stage( 'Tomcat Deploy' ) {
-                        steps {
-                                sh "mvn tomcat7:deploy"
-                        }
 	}
 }
 
