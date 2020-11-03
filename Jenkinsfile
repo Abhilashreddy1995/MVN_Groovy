@@ -21,6 +21,7 @@ pipeline {
 			steps {
 				sh "mvn install"
 			}
+			}
 		stage( 'Sonar run' ) {
                         steps {
                                 sh "mvn sonar:sonar"
@@ -32,4 +33,3 @@ pipeline {
                         }
 	}
 }
-
