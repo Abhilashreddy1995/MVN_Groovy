@@ -1,6 +1,0 @@
-projectKey=com.devops:demoGroovy
-serverUrl=http://localhost:5050/sonar
-serverVersion=7.6.0.21501
-dashboardUrl=http://localhost:5050/sonar/dashboard?id=com.devops%3AdemoGroovy
-ceTaskId=AXWOZo90uFNxyluRFQDY
-ceTaskUrl=http://localhost:5050/sonar/api/ce/task?id=AXWOZo90uFNxyluRFQDY

@@ -12,16 +12,6 @@ pipeline {
 				sh "mvn clean"
 			}
 		}
-		#stage( 'Test' ) {
-		#	steps {
-		#		sh "mvn test"
-		#		}
-		#}
-		#stage( 'Deploy' ) {
-		#	steps {
-		#		sh "mvn install"
-		#		}
-		#}
 		stage( 'Sonar run' ) {
                         steps {
                                 sh "mvn sonar:sonar"
