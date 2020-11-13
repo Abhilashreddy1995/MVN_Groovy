@@ -25,14 +25,12 @@ pipeline {
 
 		stage( 'Tomcat Deploy' ) {
                         steps {
-                                sh "mvn tomcat7:deploy"
+                                sh "/opt/devops/demoGroovy/tomcatscript"
                         	}
 		}
-                stage( 'Tomcat Restart' ) {
+                stage( 'Tomcat Deploy' ) {
                         steps {
-                                sh "su root -c '/opt/tomcat/bin/shutdown.sh'"
-				sh "sleep 4000"
-				sh "su root -c `'/opt/tomcat/bin/startup.sh'"
+				sh "mvn tomcat7:deploy"
                                 }
                 }
 

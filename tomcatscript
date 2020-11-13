@@ -1,0 +1,5 @@
+cd /opt/tomcat/webapps/
+tar -cvf  mygroovy-$(date +"%m%d%y%r").tar mygroovy
+/opt/tomcat/bin/shutdown.sh
+sleep 400 &
+/opt/tomcat/bin/startup.sh
