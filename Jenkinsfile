@@ -23,9 +23,9 @@ pipeline {
                         	}
 		}
 
-		stage( 'Tomcat Deploy' ) {
+		stage( 'Tomcat backup' ) {
                         steps {
-                                sh "/opt/devops/demoGroovy/tomcatscript"
+                                sh "/opt/devops/demoGroovy/warfilebackup"
                         	}
 		}
                 stage( 'Tomcat Deploy' ) {
@@ -33,6 +33,12 @@ pipeline {
 				sh "mvn tomcat7:deploy"
                                 }
                 }
+
+		stage( 'Tomcat restart' ) {
+			steps {
+				sh "/opt/devops/demoGroovy/tomcat_restart"
+				}
+		}
 
 	}
 }
